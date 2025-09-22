@@ -124,6 +124,9 @@ function sendResponse (res, data) {
 }
 
 module.exports = async (req, res, next) => {
+  console.log('DEBUG: process.js handler called for', req.originalUrl);
+  console.log('DEBUG: req.body at entry:', JSON.stringify(req.body));
+
   const staticman = await new Staticman(req.params)
 
   staticman.setConfigPath()
