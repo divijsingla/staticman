@@ -65,6 +65,7 @@ function process (staticman, req, res) {
   const ua = config.get('analytics.uaTrackingId')
     ? universalAnalytics(config.get('analytics.uaTrackingId'))
     : null
+  console.log('DEBUG req.body:', req.body);
   const fields = req.query.fields || req.body.fields
   const options = req.query.options || req.body.options || {}
 
