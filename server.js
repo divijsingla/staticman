@@ -1,5 +1,7 @@
 const bodyParser = require('body-parser')
 const config = require('./config')
+console.log('GITHUB_TOKEN:', process.env.GITHUB_TOKEN ? '[set]' : '[not set]');
+console.log('config.githubToken:', config.get('githubToken') ? '[set]' : '[not set]');
 const express = require('express')
 const ExpressBrute = require('express-brute')
 const GithubWebHook = require('express-github-webhook')
